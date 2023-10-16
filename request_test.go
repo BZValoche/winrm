@@ -4,11 +4,11 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/BZValoche/winrm/soap"
 	"github.com/ChrisTrenkamp/goxpath"
 	"github.com/ChrisTrenkamp/goxpath/tree"
 	"github.com/ChrisTrenkamp/goxpath/tree/xmltree"
 	"github.com/masterzen/simplexml/dom"
-	"github.com/masterzen/winrm/soap"
 	. "gopkg.in/check.v1"
 )
 
