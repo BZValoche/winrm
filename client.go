@@ -200,7 +200,8 @@ func (c *Client) RunWithContextWithInput(ctx context.Context, command string, st
 		defer func() {
 			cmd.Stdin.Close()
 		}()
-		_, _ = io.Copy(cmd.Stdin, stdin)
+		buf := make([]byte, 256*1024)
+		_, _ = io.CopyBuffer(cmd.Stdin, stdin, buf)
 	}()
 	go func() {
 		defer wg.Done()
